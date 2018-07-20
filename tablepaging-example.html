@@ -1,0 +1,289 @@
+<html>
+<head>
+<title>Paging in HTML table-Dot Net-Concept</title>
+    
+ <script type="text/javascript" src="JS/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="JS/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="JS/dataTables.bootstrap.js"></script>
+</head>
+<body>
+  
+<div >
+        <h3>Paging in HTML table-Example</h3>
+    <hr />
+    <table id="tblService" class="table table-striped table-bordered" cellspacing="0" style="width:100%;">
+        <thead>
+            <tr>
+                <th>S No</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Joe</td>
+                <td>Dean</td>
+                <td>36</td>
+                <td>United State</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Tim</td>
+                <td>Pass</td>
+                <td>50</td>
+                <td>United State</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Ajay</td>
+                <td>Yadav</td>
+                <td>23</td>
+                <td>India</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>Sonu</td>
+                <td>Bahel</td>
+                <td>20</td>
+                <td>India</td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>Chang</td>
+                <td>Lee</td>
+                <td>50</td>
+                <td>China</td>
+            </tr>
+
+            <tr>
+                <td>6</td>
+                <td>Joe</td>
+                <td>Li</td>
+                <td>34</td>
+                <td>United State</td>
+            </tr>
+
+            <tr>
+                <td>7</td>
+                <td>Chang</td>
+                <td>Le</td>
+                <td>50</td>
+                <td>China</td>
+            </tr>
+
+            <tr>
+                <td>8</td>
+                <td>Rong</td>
+                <td>Lee</td>
+                <td>20</td>
+                <td>China</td>
+            </tr>
+
+            <tr>
+                <td>9</td>
+                <td>Mahesh</td>
+                <td>Kumar</td>
+                <td>28</td>
+                <td>India</td>
+            </tr>
+
+            <tr>
+                <td>10</td>
+                <td>Ajay</td>
+                <td>Bansal</td>
+                <td>54</td>
+                <td>India</td>
+            </tr>
+
+            <tr>
+                <td>11</td>
+                <td>Rahul</td>
+                <td>Jha</td>
+                <td>23</td>
+                <td>India</td>
+            </tr>
+
+            <tr>
+                <td>12</td>
+                <td>Sudhir</td>
+                <td>Kumar</td>
+                <td>23</td>
+                <td>India</td>
+            </tr>
+
+            <tr>
+                <td>13</td>
+                <td>Anil</td>
+                <td>Arora</td>
+                <td>63</td>
+                <td>India</td>
+            </tr>
+
+            <tr>
+                <td>14</td>
+                <td>Sunil</td>
+                <td>Srivastav</td>
+                <td>24</td>
+                <td>India</td>
+            </tr>
+
+            <tr>
+                <td>15</td>
+                <td>Jack</td>
+                <td>John</td>
+                <td>36</td>
+                <td>United State</td>
+            </tr>
+
+            <tr>
+                <td>16</td>
+                <td>Merry</td>
+                <td>John</td>
+                <td>31</td>
+                <td>United State</td>
+            </tr>
+
+            <tr>
+                <td>17</td>
+                <td>Maria</td>
+                <td>Sin</td>
+                <td>36</td>
+                <td>United State</td>
+            </tr>
+
+            <tr>
+                <td>18</td>
+                <td>Robert</td>
+                <td>Pass</td>
+                <td>35</td>
+                <td>UK</td>
+            </tr>
+
+            <tr>
+                <td>19</td>
+                <td>Debi</td>
+                <td>Uel</td>
+                <td>36</td>
+                <td>UK</td>
+            </tr>
+
+            <tr>
+                <td>20</td>
+                <td>Yan</td>
+                <td>John</td>
+                <td>45</td>
+                <td>United State</td>
+            </tr>
+
+            <tr>
+                <td>21</td>
+                <td>Jai</td>
+                <td>Vardhan</td>
+                <td>36</td>
+                <td>Sri Lanka</td>
+            </tr>
+
+            <tr>
+                <td>22</td>
+                <td>Pranay</td>
+                <td>Kumar</td>
+                <td>23</td>
+                <td>India</td>
+            </tr>
+
+            <tr>
+                <td>23</td>
+                <td>Tehra</td>
+                <td>Parera</td>
+                <td>32</td>
+                <td>Sri Lanka</td>
+            </tr>
+
+            <tr>
+                <td>24</td>
+                <td>Mann</td>
+                <td>Vardhan</td>
+                <td>32</td>
+                <td>Sri Lanka</td>
+            </tr>
+
+            <tr>
+                <td>25</td>
+                <td>Vak</td>
+                <td>Joe</td>
+                <td>72</td>
+                <td>UK</td>
+            </tr>
+
+            <tr>
+                <td>26</td>
+                <td>Tushar</td>
+                <td>Kumar</td>
+                <td>39</td>
+                <td>India</td>
+            </tr>
+
+            <tr>
+                <td>27</td>
+                <td>Jack</td>
+                <td>Satin</td>
+                <td>32</td>
+                <td>South Africa</td>
+            </tr>
+
+            <tr>
+                <td>28</td>
+                <td>Satara</td>
+                <td>Helin</td>
+                <td>18</td>
+                <td>South Africa</td>
+            </tr>
+
+            <tr>
+                <td>29</td>
+                <td>Helen</td>
+                <td>Punk</td>
+                <td>33</td>
+                <td>South Africa</td>
+            </tr>
+
+            <tr>
+                <td>30</td>
+                <td>Jack</td>
+                <td>Brook</td>
+                <td>44</td>
+                <td>South Africa</td>
+            </tr>
+
+            <tr>
+                <td>31</td>
+                <td>Rohan</td>
+                <td>Bajaj</td>
+                <td>22</td>
+                <td>India</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</div>
+ 
+  
+  <script type="text/javascript">
+      $(document).ready(function () {
+          $('#tblService').dataTable({
+              "iDisplayLength": 10,
+              "lengthMenu": [5,10, 25, 50, 100]
+          });
+      });
+  </script>
+</body>
+</html>
