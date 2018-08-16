@@ -9,6 +9,7 @@
 <head>
 <title>NCESS Online Payment Services</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="shortcut icon" href="images/logo1.png" type="image/x-icon"/>
 <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -26,7 +27,7 @@
             <li><a href="LabService_Master.php">Lab Services Master</a></li>
             <li><a href="Template_Complex.php">Complex Lab Services </a></li>
             <li><a href="LabConcessions.php">Categorywise Charges</a></li>
-            <li class="lastchild"><a href="#">Map Accounts</a></li>
+            <li class="lastchild"><a href="mapAccounts.php">Map Accounts</a></li>
           </ul>
         </div>
         <div id="menubottom">

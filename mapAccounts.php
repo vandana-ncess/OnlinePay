@@ -31,10 +31,27 @@
           <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
           	<table  height="80px" width="700px">
             	
-                <tr><td height="20px;">Name of Component</td>	
-                    <td height="20px;"> <input type="text" id="txtComp" 	name="txtComp" style="width:250px;height:22px;" required />
+                    <tr><td>Service Name</td><td><select name="ddlService" id="ddlService" >
+                                <option value="XRF">XRF</option>
+                                <option value="XRD">XRD</option>
+                                <option value="SEM">SEM-EDS</option>
+                                <option value="LRM">LRM/FDR</option>
+                                <option value="PSA">PSA</option>
+                                <option value="AAS">AAS</option>
+                                <option value="MCL">Main Chemical Lab</option>
+                                <option value="OA">OA/TA</option>
+                                 <option value="EMD">EMD</option>
+                                <option value="LTC">LTC</option>
+                                <option value="RTI">RTI</option>
+                                <option value="RCA">RCA</option>
+                                <option value="SD">Security Deposit</option>
+                                <option value="REG">Students Registration</option>
+                                <option value="MISC">Miscellaneous</option>
+                            </select> </td>
+                    <td height="20px;">A/C No.</td>	
+                    <td height="20px;"> <input type="text" id="txtAccNo" 	name="txtAccNo" style="width:150px;height:22px;" required />
                     <input type="hidden" id="txtCompID" name="txtCompID" /> <input type="hidden" id="txtMode" name="txtMode" value="Add" /></td>
-                    <td><input type="submit" class="edit"  id="btnAdd" name="btnAdd" value="Add" style="width:100px;height:30px;" />	</td>                   
+                    <td><input type="submit" class="edit"  id="btnAdd" name="btnAdd" value="Save" style="width:100px;height:30px;" />	</td>                   
                 </tr>
               
              </table>
@@ -49,7 +66,7 @@
           	<table title="Rate Components" id="tblComp">
                     	<thead style="background:#3A8E00; color:#FFF;">
                         	<tr>
-                            	<th height="30px" colspan="7" ><strong>Rate affecting Components</strong></th>
+                            	<th height="30px" colspan="7" ><strong>Map Accounts</strong></th>
                             </tr>
                         </thead>
 
@@ -57,8 +74,8 @@
   							<tr>
 
  								<th width="100" style="text-align:center">Serial No.</th>
- 							 	<th>Component Name</th>
-								<th>Status</th>
+ 							 	<th>Service Name</th>
+								<th>A/C No.</th>
  							</tr>
   						</thead>
   						<tbody style="color:#333" align="left">
@@ -92,22 +109,20 @@
   	
 		if(isset($_POST["btnAdd"]))
 		{
-			$sql = "SELECT * FROM component_master WHERE componentName = '" . $_POST['txtComp'] . "' ";
-			echo $sql;
+			$sql = "SELECT * FROM map_accounts WHERE serviceName = '" . $_POST['ddlService'] . "' ";
 			$result1 = mysqli_query($conn,$sql);
 			if(mysqli_num_rows($result1) > 0)
 			{
-				echo "Component already Exists!";
+				echo "Service already mapped!";
 				exit();
 			}
-				$sql = "INSERT INTO component_master(componentName,componentStatus) VALUES('" . $_POST['txtComp'] .  "',1)";
+				$sql = "INSERT INTO map_accounts(serviceName,accountNo,status) VALUES('" . $_POST['ddlService']."','". $_POST['txtAccNo'] .  "',1)";
 				$result = mysqli_query($conn,$sql); 
-				echo $sql;
 				if($result)
 					echo "Saved Successfully!";
 				else
 					echo "Unable to save!";
-				echo "<script> window.location='Component_Master.php';</script>";
+				echo "<script> window.location='mapAccounts.php';</script>";
 					$_POST['btnAdd'] = '';
 		
 		}

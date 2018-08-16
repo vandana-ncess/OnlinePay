@@ -9,6 +9,7 @@
 <head>
 <title>NCESS Administrator</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="shortcut icon" href="images/logo1.png" type="image/x-icon"/>
 <link href="style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="JS/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="JS/jquery.dataTables.js"></script>
